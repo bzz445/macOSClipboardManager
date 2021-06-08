@@ -7,13 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		46381D8F2499EAE400B88D74 /* ListCollectionViewDelegateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46381D8E2499EAE400B88D74 /* ListCollectionViewDelegateHelper.swift */; };
+		46381D952499EF3900B88D74 /* ListCollectionViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46381D932499EF3900B88D74 /* ListCollectionViewItem.swift */; };
+		46381D962499EF3900B88D74 /* ListCollectionViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46381D942499EF3900B88D74 /* ListCollectionViewItem.xib */; };
+		4656AC6D2656566D00CAEFC5 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4656AC6C2656566D00CAEFC5 /* String.swift */; };
 		46CFD33424989DB6004FE472 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CFD33324989DB6004FE472 /* AppDelegate.swift */; };
 		46CFD33624989DB6004FE472 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CFD33524989DB6004FE472 /* ViewController.swift */; };
 		46CFD33824989DB7004FE472 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46CFD33724989DB7004FE472 /* Assets.xcassets */; };
 		46CFD33B24989DB7004FE472 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46CFD33924989DB7004FE472 /* Main.storyboard */; };
+		46CFD70524990017004FE472 /* MainWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CFD70424990017004FE472 /* MainWindow.swift */; };
+		46CFD7072499E497004FE472 /* PaddedTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CFD7062499E497004FE472 /* PaddedTextFieldCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		46381D8E2499EAE400B88D74 /* ListCollectionViewDelegateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCollectionViewDelegateHelper.swift; sourceTree = "<group>"; };
+		46381D932499EF3900B88D74 /* ListCollectionViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCollectionViewItem.swift; sourceTree = "<group>"; };
+		46381D942499EF3900B88D74 /* ListCollectionViewItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListCollectionViewItem.xib; sourceTree = "<group>"; };
+		4656AC6C2656566D00CAEFC5 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		46CFD33024989DB6004FE472 /* ClipboardManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClipboardManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46CFD33324989DB6004FE472 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46CFD33524989DB6004FE472 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -21,6 +31,8 @@
 		46CFD33A24989DB7004FE472 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		46CFD33C24989DB7004FE472 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46CFD33D24989DB7004FE472 /* ClipboardManager.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ClipboardManager.entitlements; sourceTree = "<group>"; };
+		46CFD70424990017004FE472 /* MainWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindow.swift; sourceTree = "<group>"; };
+		46CFD7062499E497004FE472 /* PaddedTextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddedTextFieldCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +46,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		46381D902499EDCA00B88D74 /* ListCollectionViewItem */ = {
+			isa = PBXGroup;
+			children = (
+				46381D932499EF3900B88D74 /* ListCollectionViewItem.swift */,
+				46381D942499EF3900B88D74 /* ListCollectionViewItem.xib */,
+			);
+			path = ListCollectionViewItem;
+			sourceTree = "<group>";
+		};
+		4656AC6B2656565F00CAEFC5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4656AC6C2656566D00CAEFC5 /* String.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		46CFD32724989DB6004FE472 = {
 			isa = PBXGroup;
 			children = (
@@ -53,12 +82,17 @@
 		46CFD33224989DB6004FE472 /* ClipboardManager */ = {
 			isa = PBXGroup;
 			children = (
+				4656AC6B2656565F00CAEFC5 /* Extensions */,
+				46381D902499EDCA00B88D74 /* ListCollectionViewItem */,
 				46CFD33324989DB6004FE472 /* AppDelegate.swift */,
 				46CFD33524989DB6004FE472 /* ViewController.swift */,
 				46CFD33724989DB7004FE472 /* Assets.xcassets */,
 				46CFD33924989DB7004FE472 /* Main.storyboard */,
 				46CFD33C24989DB7004FE472 /* Info.plist */,
 				46CFD33D24989DB7004FE472 /* ClipboardManager.entitlements */,
+				46CFD70424990017004FE472 /* MainWindow.swift */,
+				46CFD7062499E497004FE472 /* PaddedTextFieldCell.swift */,
+				46381D8E2499EAE400B88D74 /* ListCollectionViewDelegateHelper.swift */,
 			);
 			path = ClipboardManager;
 			sourceTree = "<group>";
@@ -122,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46CFD33824989DB7004FE472 /* Assets.xcassets in Resources */,
+				46381D962499EF3900B88D74 /* ListCollectionViewItem.xib in Resources */,
 				46CFD33B24989DB7004FE472 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -134,7 +169,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				46CFD33624989DB6004FE472 /* ViewController.swift in Sources */,
+				46381D8F2499EAE400B88D74 /* ListCollectionViewDelegateHelper.swift in Sources */,
+				46CFD70524990017004FE472 /* MainWindow.swift in Sources */,
 				46CFD33424989DB6004FE472 /* AppDelegate.swift in Sources */,
+				4656AC6D2656566D00CAEFC5 /* String.swift in Sources */,
+				46CFD7072499E497004FE472 /* PaddedTextFieldCell.swift in Sources */,
+				46381D952499EF3900B88D74 /* ListCollectionViewItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,7 +317,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.okohub.clipboardManager.ClipboardManager;
+				PRODUCT_BUNDLE_IDENTIFIER = com.okohub.clipboardManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -295,7 +335,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.okohub.clipboardManager.ClipboardManager;
+				PRODUCT_BUNDLE_IDENTIFIER = com.okohub.clipboardManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};

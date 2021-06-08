@@ -1,31 +1,37 @@
 {
   "images" : [
     {
+      "filename" : "icons8-тест-пройден-101.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "16x16"
     },
     {
+      "filename" : "icons8-тест-пройден-100.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "16x16"
     },
     {
+      "filename" : "icons8-тест-пройден-99.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "32x32"
     },
     {
+      "filename" : "icons8-тест-пройден-98.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "32x32"
     },
     {
+      "filename" : "icons8-тест-пройден-97.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "128x128"
     },
     {
+      "filename" : "icons8-тест-пройден-96.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "128x128"
