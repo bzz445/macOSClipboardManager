@@ -18,7 +18,11 @@ class ListCollectionViewItem: NSCollectionViewItem {
     
     override var isSelected: Bool {
         didSet {
-            self.view.layer?.backgroundColor = (isSelected ? NSColor.controlAccentColor.cgColor : NSColor.clear.cgColor)
+            if #available(macOS 10.14, *) {
+                self.view.layer?.backgroundColor = (isSelected ? NSColor.controlAccentColor.cgColor : NSColor.clear.cgColor)
+            } else {
+                self.view.layer?.backgroundColor = (isSelected ? NSColor.systemGray.cgColor : NSColor.clear.cgColor)
+            }
             self.textLabel.textColor = isSelected ? NSColor.selectedMenuItemTextColor : NSColor.controlTextColor
         }
     }

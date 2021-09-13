@@ -28,6 +28,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         statusBarMenu.delegate = self
         statusBarMenu.addItem(withTitle: "Clear history", action: #selector(didTapClear), keyEquivalent: "")
         statusBarMenu.addItem(NSMenuItem.separator())
+        statusBarMenu.addItem(withTitle: "About", action: #selector(didTapAbout), keyEquivalent: "")
         statusBarMenu.addItem(withTitle: "Quit", action: #selector(didTapQuit), keyEquivalent: "")
         
         // window
@@ -94,13 +95,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         // правая кнопка
         if event.type == .rightMouseDown || event.type == .rightMouseUp {
-            windowController.window!.close()
+            windowController.window?.close()
             statusBarItem.menu = statusBarMenu // добавляем меню
             statusBarItem.button?.performClick(nil) // ...и нажимаем программно
         } else {
             // на левую кнопку показываем или скрываем окно
             if windowController.window?.isVisible ?? false {
-                windowController.window!.close()
+                windowController.window?.close()
             } else {
                 showWindow()
             }
@@ -108,15 +109,23 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     @objc func didResignKeyNotification() {
-        self.windowController.window!.close()
+        self.windowController.window?.close()
     }
     
     // menu handle items
-    
     @objc func didTapClear() {
         mainViewController.clear()
     }
     
+    @objc func didTapAbout() {
+        guard let window = AboutWindowController.defaultController.window else {
+            return
+        }
+
+        window.orderFrontRegardless()
+        NSApplication.shared.activate(ignoringOtherApps: true)
+    }
+
     @objc func didTapQuit() {
         NSApplication.shared.terminate(self)
     }

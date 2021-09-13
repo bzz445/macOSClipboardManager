@@ -24,11 +24,6 @@ class ViewController: NSViewController {
         self.watchPasteboard { (string) in
             self.list.append(string)
             UserDefaults.standard.set(self.list, forKey: "data")
-            
-//            if let app = self.getForegroundApp() {
-//                // get icon https://stackoverflow.com/questions/12166532/get-icon-for-another-application-in-objective-c/12166583
-//                print("bzz \(app.bundleIdentifier) \(app.localizedName)")
-//            }
         }
     }
     
@@ -38,17 +33,17 @@ class ViewController: NSViewController {
     }
     
     override func viewWillDisappear() {
-        print("viewWillDisAppear")
+
     }
     
     override var representedObject: Any? {
         didSet {
-            // Update the view, if already loaded.
+
         }
     }
     
     @IBAction func searchTextFieldAction(_ sender: Any) {
-        //print(sender)
+
     }
     
     func clear() {
@@ -60,13 +55,11 @@ class ViewController: NSViewController {
         self.searchResult = self.list
         self.listCollectionViewDelegate.data = self.searchResult
         self.listCollectionView.reloadData()
-//        self.listCollectionView.becomeFirstResponder()
     }
     
     func setupListCollectionView() {
         let flowLayout = NSCollectionViewFlowLayout()
         flowLayout.itemSize = NSSize(width: self.listCollectionView.frame.size.width, height: 30.0)
-//        flowLayout.sectionInset = NSEdgeInsets(top: 10.0, left: 10.0, bottom: 5.0, right: 5.0)
         flowLayout.minimumInteritemSpacing = 1.0
         flowLayout.minimumLineSpacing = 1.0
         self.listCollectionView.isSelectable = true
@@ -93,7 +86,6 @@ class ViewController: NSViewController {
         if selectedItem < self.searchResult.count && selectedItem >= 0 {
             self.listCollectionView.deselectAll(nil)
             self.listCollectionView.selectItems(at: [IndexPath(item: selectedItem, section: 0)], scrollPosition: NSCollectionView.ScrollPosition.centeredVertically)
-//            print(self.list[selectedItem])
         }
     }
     
@@ -150,7 +142,6 @@ extension ViewController: NSTextFieldDelegate {
             NSApplication.shared.windows.last?.close()
             return true
         case #selector(NSResponder.cancelOperation(_:)):
-//            NSApplication.shared.windows.last?.resignKey()
             NSApplication.shared.windows.last?.close()
             return true
         default:

@@ -11,6 +11,9 @@
 		46381D952499EF3900B88D74 /* ListCollectionViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46381D932499EF3900B88D74 /* ListCollectionViewItem.swift */; };
 		46381D962499EF3900B88D74 /* ListCollectionViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46381D942499EF3900B88D74 /* ListCollectionViewItem.xib */; };
 		4656AC6D2656566D00CAEFC5 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4656AC6C2656566D00CAEFC5 /* String.swift */; };
+		469FF7A826EF767400EF99AB /* AboutWindow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 469FF7A526EF767400EF99AB /* AboutWindow.storyboard */; };
+		469FF7A926EF767400EF99AB /* AboutWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469FF7A626EF767400EF99AB /* AboutWindowController.swift */; };
+		469FF7AA26EF767400EF99AB /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469FF7A726EF767400EF99AB /* AboutViewController.swift */; };
 		46CFD33424989DB6004FE472 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CFD33324989DB6004FE472 /* AppDelegate.swift */; };
 		46CFD33624989DB6004FE472 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CFD33524989DB6004FE472 /* ViewController.swift */; };
 		46CFD33824989DB7004FE472 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46CFD33724989DB7004FE472 /* Assets.xcassets */; };
@@ -24,6 +27,9 @@
 		46381D932499EF3900B88D74 /* ListCollectionViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCollectionViewItem.swift; sourceTree = "<group>"; };
 		46381D942499EF3900B88D74 /* ListCollectionViewItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListCollectionViewItem.xib; sourceTree = "<group>"; };
 		4656AC6C2656566D00CAEFC5 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		469FF7A526EF767400EF99AB /* AboutWindow.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AboutWindow.storyboard; sourceTree = "<group>"; };
+		469FF7A626EF767400EF99AB /* AboutWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutWindowController.swift; sourceTree = "<group>"; };
+		469FF7A726EF767400EF99AB /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		46CFD33024989DB6004FE472 /* ClipboardManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClipboardManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46CFD33324989DB6004FE472 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46CFD33524989DB6004FE472 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +69,16 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		469FF7A426EF767400EF99AB /* About */ = {
+			isa = PBXGroup;
+			children = (
+				469FF7A526EF767400EF99AB /* AboutWindow.storyboard */,
+				469FF7A626EF767400EF99AB /* AboutWindowController.swift */,
+				469FF7A726EF767400EF99AB /* AboutViewController.swift */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
 		46CFD32724989DB6004FE472 = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +98,7 @@
 		46CFD33224989DB6004FE472 /* ClipboardManager */ = {
 			isa = PBXGroup;
 			children = (
+				469FF7A426EF767400EF99AB /* About */,
 				4656AC6B2656565F00CAEFC5 /* Extensions */,
 				46381D902499EDCA00B88D74 /* ListCollectionViewItem */,
 				46CFD33324989DB6004FE472 /* AppDelegate.swift */,
@@ -155,6 +172,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				469FF7A826EF767400EF99AB /* AboutWindow.storyboard in Resources */,
 				46CFD33824989DB7004FE472 /* Assets.xcassets in Resources */,
 				46381D962499EF3900B88D74 /* ListCollectionViewItem.xib in Resources */,
 				46CFD33B24989DB7004FE472 /* Main.storyboard in Resources */,
@@ -171,8 +189,10 @@
 				46CFD33624989DB6004FE472 /* ViewController.swift in Sources */,
 				46381D8F2499EAE400B88D74 /* ListCollectionViewDelegateHelper.swift in Sources */,
 				46CFD70524990017004FE472 /* MainWindow.swift in Sources */,
+				469FF7AA26EF767400EF99AB /* AboutViewController.swift in Sources */,
 				46CFD33424989DB6004FE472 /* AppDelegate.swift in Sources */,
 				4656AC6D2656566D00CAEFC5 /* String.swift in Sources */,
+				469FF7A926EF767400EF99AB /* AboutWindowController.swift in Sources */,
 				46CFD7072499E497004FE472 /* PaddedTextFieldCell.swift in Sources */,
 				46381D952499EF3900B88D74 /* ListCollectionViewItem.swift in Sources */,
 			);
@@ -242,7 +262,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -296,7 +316,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -312,12 +332,14 @@
 				CODE_SIGN_ENTITLEMENTS = ClipboardManager/ClipboardManager.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 2;
 				INFOPLIST_FILE = ClipboardManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.okohub.clipboardManager;
+				MARKETING_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.b333i.clipboardManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -330,12 +352,14 @@
 				CODE_SIGN_ENTITLEMENTS = ClipboardManager/ClipboardManager.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 2;
 				INFOPLIST_FILE = ClipboardManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.okohub.clipboardManager;
+				MARKETING_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.b333i.clipboardManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
