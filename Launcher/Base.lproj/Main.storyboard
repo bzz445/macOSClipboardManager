@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="18122"/>
-        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="19455"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -12,11 +11,11 @@
                 <application id="hnw-xV-0zn" sceneMemberID="viewController">
                     <menu key="mainMenu" title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
                         <items>
-                            <menuItem title="ClipboardManager" id="1Xt-HY-uBw">
+                            <menuItem title="Launcher" id="1Xt-HY-uBw">
                                 <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="ClipboardManager" systemMenu="apple" id="uQy-DD-JDr">
+                                <menu key="submenu" title="Launcher" systemMenu="apple" id="uQy-DD-JDr">
                                     <items>
-                                        <menuItem title="About ClipboardManager" id="5kV-Vb-QxS">
+                                        <menuItem title="About Launcher" id="5kV-Vb-QxS">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
                                                 <action selector="orderFrontStandardAboutPanel:" target="Ady-hI-5gd" id="Exp-CZ-Vem"/>
@@ -30,7 +29,7 @@
                                             <menu key="submenu" title="Services" systemMenu="services" id="hz9-B4-Xy5"/>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="4je-JR-u6R"/>
-                                        <menuItem title="Hide ClipboardManager" keyEquivalent="h" id="Olw-nP-bQN">
+                                        <menuItem title="Hide Launcher" keyEquivalent="h" id="Olw-nP-bQN">
                                             <connections>
                                                 <action selector="hide:" target="Ady-hI-5gd" id="PnN-Uc-m68"/>
                                             </connections>
@@ -48,7 +47,7 @@
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
-                                        <menuItem title="Quit ClipboardManager" keyEquivalent="q" id="4sb-4s-VLi">
+                                        <menuItem title="Quit Launcher" keyEquivalent="q" id="4sb-4s-VLi">
                                             <connections>
                                                 <action selector="terminate:" target="Ady-hI-5gd" id="Te7-pn-YzF"/>
                                             </connections>
@@ -661,7 +660,7 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="Help" systemMenu="help" id="F2S-fz-NVQ">
                                     <items>
-                                        <menuItem title="ClipboardManager Help" keyEquivalent="?" id="FKE-Sm-Kum">
+                                        <menuItem title="Launcher Help" keyEquivalent="?" id="FKE-Sm-Kum">
                                             <connections>
                                                 <action selector="showHelp:" target="Ady-hI-5gd" id="y7X-2Q-9no"/>
                                             </connections>
@@ -675,108 +674,11 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="ClipboardManager" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Launcher" customModuleProvider="target"/>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="0.0"/>
-        </scene>
-        <!--Window Controller-->
-        <scene sceneID="R2V-B0-nI4">
-            <objects>
-                <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-                <windowController storyboardIdentifier="MainWidowsController" id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" titlebarAppearsTransparent="YES" titleVisibility="hidden" id="IQv-IB-iLA" customClass="MainWindow" customModule="ClipboardManager" customModuleProvider="target">
-                        <windowStyleMask key="styleMask" titled="YES" utility="YES" nonactivatingPanel="YES" fullSizeContentView="YES"/>
-                        <windowPositionMask key="initialPositionMask" topStrut="YES"/>
-                        <rect key="contentRect" x="196" y="600" width="480" height="270"/>
-                        <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
-                        <value key="maxSize" type="size" width="800" height="600"/>
-                        <connections>
-                            <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
-                        </connections>
-                    </window>
-                    <connections>
-                        <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
-                    </connections>
-                </windowController>
-            </objects>
-            <point key="canvasLocation" x="75" y="250"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="hIz-AP-VOD">
-            <objects>
-                <viewController storyboardIdentifier="MainViewController" id="XfG-lQ-9wD" customClass="ViewController" customModule="ClipboardManager" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <subviews>
-                            <visualEffectView blendingMode="behindWindow" material="appearanceBased" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="nZL-hu-Tc6">
-                                <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
-                                <subviews>
-                                    <textField wantsLayer="YES" focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="K0D-kP-ofo">
-                                        <rect key="frame" x="-2" y="241" width="484" height="29"/>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" focusRingType="none" placeholderString="Search" usesSingleLineMode="YES" id="PLZ-qK-9ut" customClass="PaddedTextFieldCell" customModule="ClipboardManager" customModuleProvider="target">
-                                            <font key="font" metaFont="systemLight" size="25"/>
-                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                        </textFieldCell>
-                                        <connections>
-                                            <action selector="searchTextFieldAction:" target="XfG-lQ-9wD" id="C1r-Ip-LSz"/>
-                                        </connections>
-                                    </textField>
-                                    <scrollView wantsLayer="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7th-ah-8c9">
-                                        <rect key="frame" x="0.0" y="0.0" width="480" height="241"/>
-                                        <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="IyI-9g-cV3">
-                                            <rect key="frame" x="0.0" y="0.0" width="480" height="241"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                            <subviews>
-                                                <collectionView id="Qso-kK-Js0">
-                                                    <rect key="frame" x="0.0" y="0.0" width="480" height="158"/>
-                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
-                                                    <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="BFQ-7W-jye">
-                                                        <size key="itemSize" width="1" height="1"/>
-                                                    </collectionViewFlowLayout>
-                                                    <color key="primaryBackgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </collectionView>
-                                            </subviews>
-                                        </clipView>
-                                        <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="1Xx-NY-8Nm">
-                                            <rect key="frame" x="1" y="144" width="233" height="15"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </scroller>
-                                        <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="qEh-Ry-RJM">
-                                            <rect key="frame" x="234" y="1" width="15" height="143"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </scroller>
-                                    </scrollView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="7th-ah-8c9" secondAttribute="bottom" id="9pn-SI-6EH"/>
-                                    <constraint firstAttribute="trailing" secondItem="K0D-kP-ofo" secondAttribute="trailing" id="Fsq-gp-cPC"/>
-                                    <constraint firstItem="7th-ah-8c9" firstAttribute="leading" secondItem="nZL-hu-Tc6" secondAttribute="leading" id="NBD-qR-wmj"/>
-                                    <constraint firstItem="7th-ah-8c9" firstAttribute="top" secondItem="K0D-kP-ofo" secondAttribute="bottom" id="On8-mE-3bl"/>
-                                    <constraint firstItem="K0D-kP-ofo" firstAttribute="leading" secondItem="nZL-hu-Tc6" secondAttribute="leading" id="SQD-9z-YKC"/>
-                                    <constraint firstAttribute="trailing" secondItem="7th-ah-8c9" secondAttribute="trailing" id="YXS-92-6Av"/>
-                                    <constraint firstItem="K0D-kP-ofo" firstAttribute="top" secondItem="nZL-hu-Tc6" secondAttribute="top" id="smk-5t-CVj"/>
-                                </constraints>
-                            </visualEffectView>
-                        </subviews>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="nZL-hu-Tc6" secondAttribute="trailing" id="In9-7N-QRO"/>
-                            <constraint firstItem="nZL-hu-Tc6" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="fc1-CB-4c0"/>
-                            <constraint firstItem="nZL-hu-Tc6" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="hll-lk-jE3"/>
-                            <constraint firstAttribute="bottom" secondItem="nZL-hu-Tc6" secondAttribute="bottom" id="y1z-zg-RfF"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="listCollectionView" destination="Qso-kK-Js0" id="C9z-gC-hKq"/>
-                        <outlet property="searchTextField" destination="K0D-kP-ofo" id="D2z-PB-bcA"/>
-                    </connections>
-                </viewController>
-                <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="75" y="655"/>
         </scene>
     </scenes>
 </document>

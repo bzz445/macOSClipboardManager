@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class ViewController: NSViewController {
+class MainViewController: NSViewController {
     @IBOutlet weak var searchTextField: NSTextField!
     @IBOutlet weak var listCollectionView: NSCollectionView!
     
@@ -128,7 +128,7 @@ class ViewController: NSViewController {
     }
 }
 
-extension ViewController: NSTextFieldDelegate {
+extension MainViewController: NSTextFieldDelegate {
     func control(_ control: NSControl, textView: NSTextView, doCommandBy commandSelector: Selector) -> Bool {
         switch commandSelector {
         case #selector(NSResponder.moveDown(_:)):
